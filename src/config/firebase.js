@@ -34,28 +34,6 @@ export const generateToken = async () => {
     }
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
-
-// export const requestPermission = async () => {
-//   console.log("Requesting User Permission......");
-//   try {
-//     const permission = await Notification.requestPermission();
-//     if (permission === "granted") {
-//       console.log("Notification User Permission Granted.");
-//       const currentToken = await getToken(messaging, {
-//         vapidKey: `BMdVv9p5ypo6L83obg0y2Zrl5P7rkHD2yzdLztaqWHB94D1bO4AHL6Nu8n7kBkRmOk_9xrV_JYuuovO8f9XXUcI`,
-//       });
-//       if (currentToken) {
-//         console.log("Client Token: ", currentToken);
-//         localStorage.setItem("device_token", currentToken);
-//       } else {
-//         console.log("Failed to generate the app registration token.");
-//       }
-//     } else {
-//       console.log("User Permission Denied.");
-//     }
-//   } catch (err) {
-//     console.log("An error occurred when requesting permission:", err);
-//   }
-// };
